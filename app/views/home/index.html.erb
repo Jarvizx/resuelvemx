@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col col-md-6 offset-md-3">
+    <h1>Consultas</h1>
+    <div class="form-group">
+      <%= label_tag :id_cliente %>
+      <%= text_field_tag :id, '8672e846-9c89-4dbf-a1cc-b85a2da5abe1', { :class => 'form-control id' } %>
+    </div>
+    <div class="form-group">
+      <%= label_tag :fecha_inicio %>
+      <%= text_field_tag :start, '2017-01-01', { :class => 'form-control start' } %>
+    </div>
+    <div class="form-group">
+      <%= label_tag :fecha_fin %>
+      <%= text_field_tag :finish, '2017-12-31', { :class => 'form-control finish' } %>
+    </div>
+    <br>
+    <%= button_tag 'Consultar', { type: 'button', :class => 'btn btn-primary consultar' } %>
+    <hr>
+    <div class="resultado"></div>
+    <%= image_tag "loading-pacman.gif", :class => 'loading d-none' %>
+  </div>
+</div>
